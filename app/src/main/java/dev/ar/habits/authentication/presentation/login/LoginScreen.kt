@@ -104,8 +104,8 @@ fun Body(
       Text(
         text = "Login",
         fontSize = 16.sp,
-        fontWeight = FontWeight.Medium,
-        color = FeatColor.Gray50,
+        fontWeight = FontWeight.Bold,
+        color = FeatColor.Gray
       )
       HabitsTextField(
         modifier = Modifier.fillMaxWidth(),

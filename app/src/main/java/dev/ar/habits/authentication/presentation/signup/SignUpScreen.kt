@@ -69,6 +69,8 @@ fun Title(
     Text(
       text = "Create your account",
       fontSize = 20.sp,
+      fontWeight = FontWeight.Bold,
+      color = FeatColor.Gray
     )
   }
 }

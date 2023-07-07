@@ -91,7 +91,8 @@ fun HabitsTextField(
       placeholderColor = FeatColor.Gray50,
       focusedSupportingTextColor = Color.Transparent,
       focusedIndicatorColor = Color.Transparent,
-      cursorColor = FeatColor.Gray50
+      cursorColor = FeatColor.Gray50,
+      focusedLeadingIconColor = FeatColor.Gray50
     ),
     placeholder = {
       Text(
@@ -159,7 +160,8 @@ private fun TrailingIcon(
     IconButton(onClick = onIconClick) {
       Icon(
         imageVector = trailingIcon,
-        contentDescription = null
+        contentDescription = null,
+        tint = FeatColor.Gray50
       )
     }
   } else if (isPassword) {
@@ -168,13 +170,14 @@ private fun TrailingIcon(
         if (isTextHidden) Icons.Default.Visibility else Icons.Default.Visibility
       Icon(
         imageVector = icon,
-        contentDescription = null
+        contentDescription = null,
+        tint = FeatColor.Gray50
       )
     }
   } else if (isValid) {
     Icon(
       imageVector = Icons.Default.Check,
-      contentDescription = null
+      contentDescription = null,
     )
   }
 }
@@ -188,7 +191,8 @@ private fun LeadingIcon(
     IconButton(onClick = onIconClick) {
       Icon(
         imageVector = leadingIcon,
-        contentDescription = null
+        contentDescription = null,
+        tint = FeatColor.Gray50
       )
     }
   }

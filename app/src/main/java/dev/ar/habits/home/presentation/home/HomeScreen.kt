@@ -43,7 +43,7 @@ import java.time.ZonedDateTime
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-
+  onClickAddHabit: () -> Unit
 ) {
   Scaffold(
     modifier = Modifier
@@ -56,7 +56,12 @@ fun HomeScreen(
           containerColor = FeatColor.LightGray
         ),
         title = {
-          Text("Home", fontSize = 24.sp)
+          Text(
+            "Home",
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            color = FeatColor.Gray
+          )
         },
         navigationIcon = {
           HabitsButtonCircle(
@@ -66,7 +71,6 @@ fun HomeScreen(
             contentColor = FeatColor.Gray,
             size = 24.dp
           ) {
-
           }
         },
         actions = {
@@ -90,7 +94,7 @@ fun HomeScreen(
             color = FeatColor.Blue50
           ),
         icon = Icons.Default.Add,
-        onClick = {},
+        onClick = onClickAddHabit,
       )
     }
   ) {
@@ -175,6 +179,6 @@ fun HomePrev() {
       .fillMaxSize()
       .background(FeatColor.White)
   ) {
-    HomeScreen()
+    HomeScreen {}
   }
 }

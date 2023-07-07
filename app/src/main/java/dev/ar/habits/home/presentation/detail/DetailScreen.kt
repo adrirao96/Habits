@@ -27,6 +27,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -55,7 +56,12 @@ fun DetailScreen() {
       CenterAlignedTopAppBar(
         modifier = Modifier.padding(10.dp),
         title = {
-          Text(text = "New habit", fontSize = 24.sp)
+          Text(
+            text = "New habit",
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            color = FeatColor.Gray
+          )
         },
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
           containerColor = FeatColor.LightGray
